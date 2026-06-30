@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ClinicaIrma.Api/ClinicaIrma.Api.csproj" />
+  <Project Path="ClinicaIrma.Application/ClinicaIrma.Application.csproj" />
+  <Project Path="ClinicaIrma.Domain/ClinicaIrma.Domain.csproj" />
+  <Project Path="ClinicaIrma.Infrastructure/ClinicaIrma.Infrastructure.csproj" />
+</Solution>
