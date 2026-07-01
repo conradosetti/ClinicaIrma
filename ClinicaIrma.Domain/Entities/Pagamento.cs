@@ -14,6 +14,9 @@ public class Pagamento
     
     // Pode ser: "Pendente", "Pago", "Cancelado"
     public string Status { get; set; } = "Pendente"; 
+    // --- Novos campos para controle fiscal ---
+    public bool ReciboReceitaFederalEmitido { get; set; } = false;
+    public string? UrlReciboGerado { get; set; }
 
     // Propriedade de Navegação do Entity Framework
     public Paciente? Paciente { get; set; }

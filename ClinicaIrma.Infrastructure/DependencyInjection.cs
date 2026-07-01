@@ -1,4 +1,8 @@
+using ClinicaIrma.Application.Interfaces;
+using ClinicaIrma.Domain.Repositories;
+using ClinicaIrma.Infrastructure.Auth;
 using ClinicaIrma.Infrastructure.Data;
+using ClinicaIrma.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,8 +18,11 @@ public static class DependencyInjection
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         // 2. Registra os Repositórios
-        // services.AddScoped<IPacienteRepository, PacienteRepository>();
-
+        services.AddScoped<IPacienteRepository, PacienteRepository>();
+        services.AddScoped<ISessaoRepository, SessaoRepository>();
+        services.AddScoped<IPagamentoRepository, PagamentoRepository>();
+        services.AddScoped<ITokenService, TokenService>();
+        
         return services;
     }
 }
